@@ -13,4 +13,4 @@ def blkid():
          param = line[index + 2:53]
      result.append(param)
   return result
-#print(blkid())
+print(blkid())
