@@ -44,7 +44,6 @@ def fstauuid():
 #
 for i in fstauuid() :
   if i not in blkid():
-    print i
-
+    print i 
 #for fstabuuid() in blkid () :
   #print fstabuuid()
