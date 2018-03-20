@@ -4,5 +4,5 @@
  - Add WALL color alert 
 
 ```
-printf "I ${RED}love${NC} Stack Overflow\n" > /dev/pts/1
+printf "Azure ${RED}love${NC} Linux \n" > /dev/pts/1
 ```
