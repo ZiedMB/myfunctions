@@ -9,11 +9,13 @@ def blkid():
   lines = out.splitlines()
   for line in lines:
      if 'dev/sd' in line:
-         index = line.rfind('=', 0, 40)
-         param = line[index + 2:53]
+         #print line
+         index = line.rfind('UUID=')
+         #print index
+         param = line[index + 6: index + 42]
      result.append(param)
   return result
-#print type(blkid())
+#print(blkid())
 
 def fstauuid():
   result = []
@@ -33,7 +35,7 @@ def fstauuid():
   fh.close()
   return result
 #print type(fstauuid())
-
+#print(fstauuid()) 
 #For i in fstauuid() :
 #  for j in blkid() :
 #    if i != j :

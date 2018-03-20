@@ -9,8 +9,10 @@ def blkid():
   lines = out.splitlines()
   for line in lines:
      if 'dev/sd' in line:
-         index = line.rfind('=', 0, 40)
-         param = line[index + 2:53]
+         #print line
+         index = line.rfind('UUID=')
+         #print index
+         param = line[index + 6: index + 42]
      result.append(param)
   return result
 print(blkid())
